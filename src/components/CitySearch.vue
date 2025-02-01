@@ -3,6 +3,7 @@
     <div class="relative flex items-center">
       <div class="relative w-full">
         <input
+          ref="searchInput"
           v-model="query"
           @input="handleSearchInput"
           @keyup.enter="triggerSearch"
@@ -95,6 +96,7 @@ const query = ref('')
 const searchResults = ref([])
 const isSearching = ref(false)
 const searchTimeout = ref(null)
+const searchInput = ref(null)
 
 const handleSearchInput = async () => {
   if (searchTimeout.value) clearTimeout(searchTimeout.value)
@@ -146,6 +148,7 @@ const triggerSearch = () => {
 const clearSearch = () => {
   query.value = ''
   searchResults.value = []
+  searchInput.value.focus()
 }
 </script>
 
