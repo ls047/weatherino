@@ -415,7 +415,7 @@
         ></div>
       </div>
     </div>
-
+    <!--added-->
     <!-- Update the cloudy effects section -->
     <div v-if="isCloudyWeather" class="smoky-effects">
       <svg class="smoke-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
